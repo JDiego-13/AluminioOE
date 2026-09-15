@@ -72,7 +72,7 @@ export const products: Product[] = [
       },
       {
         type: "video",
-        src: `${base}videos/domo-01-2.mp4`,
+        src: `${base}images/domo-01-2.mp4`,
         alt: "Domo estructural en funcionamiento"
       }
     ],
@@ -283,6 +283,37 @@ export const products: Product[] = [
         src: `${base}images/puerta-negra-delgada-01.jpeg`,
         alt: "Puerta delgada negra"
       }
+    ]
+  },
+  {
+    id: "puerta-blanca-pasillo-01",
+    nombre: "puerta blanca para pasillo",
+    categoria: "puertas",
+    colores: ["blanco", "gris-europa", "madera", "negro"],
+    gama: "intermedio",
+    descripcion:
+      "puerta delgada color blanca para pasillo, estilo moderno",
+    media: [
+      {
+        type: "image",
+        src: `${base}images/puerta-blanca-pasillo-01.jpeg`,
+        alt: "Puerta delgada negra"
+      },
+      {
+        type: "image",
+        src: `${base}images/puerta-blanca-pasillo-02.jpeg`,
+        alt: "Puerta delgada negra"
+      },
+      {
+        type: "image",
+        src: `${base}images/puerta-blanca-pasillo-03.jpeg`,
+        alt: "Puerta delgada negra"
+      },
+      {
+        type: "image",
+        src: `${base}images/puerta-blanca-pasillo-04.jpeg`,
+        alt: "Puerta delgada negra"
+      },
     ]
   }
 ];

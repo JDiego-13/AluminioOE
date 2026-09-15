@@ -33,14 +33,17 @@ export function ProductModal({ product, onClose }: Props) {
   }, [onClose]);
 
   const total = product?.media.length ?? 0;
+  
 
   useEffect(() => {
-    if (total <= 1) return;
-    const timer = setInterval(() => {
-      setIndex((i) => (i + 1) % total);
-    }, 3000);
-    return () => clearInterval(timer);
-  }, [total, index]);
+  if (!product || total <= 1) return;
+  if (product.media[index]?.type === "video") return;
+
+  const timer = setInterval(() => {
+    setIndex((i) => (i + 1) % total);
+  }, 3000);
+  return () => clearInterval(timer);
+}, [product, total, index]);
 
   if (!product) return null;
 
@@ -88,7 +91,13 @@ export function ProductModal({ product, onClose }: Props) {
                 {actual.type === "image" ? (
                   <img src={actual.src} alt={actual.alt} />
                 ) : (
-                  <video src={actual.src} controls />
+                  <video
+                    src={actual.src}
+                    controls
+                    autoPlay
+                    muted
+                    onEnded={siguiente}
+                  />
                 )}
               </motion.div>
             </AnimatePresence>
