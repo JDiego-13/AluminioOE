@@ -53,7 +53,7 @@ export function ProductModal({ product, onClose }: Props) {
   const anterior = () => setIndex((i) => (i - 1 + total) % total);
 
   const mensaje = encodeURIComponent(
-    `Hola, me interesa cotizar: ${product.nombre}`,
+    `Hola, vi su catálogo y quiero más información.`,
   );
   const whatsappLink = `https://wa.me/${CONTACT.whatsappNumber}?text=${mensaje}`;
 
